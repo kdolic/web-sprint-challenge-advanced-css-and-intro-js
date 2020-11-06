@@ -240,13 +240,17 @@ it returns an array with names of artists who were born in and died in 20th cent
 example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(array){
+function get20s(artists){
   let newArr = [];
-
-  for(let i = 0; i < array.length; i++){
-
+  for(let i = 0; i < artists.length; i++){
+    if(artists[i].years >= "1900" && artists[i].years <= "2000"){
+      newArr.push(artists[i].name);
+    }
   }
+  //console.log(newArr);
+  return newArr;
 }
+get20s(artists);
 
 
 
@@ -260,8 +264,8 @@ Create a function called `removeArtist` that takes two arguments:
  * it will remove Amedeo Modigliani from our dataset and log the number 19.  
 */
 function removeArtist(artists, index) {
-   artists[index].splice;
-   return artists.length - 1;
+   artists.splice(index, 1);
+   return artists.length; // cleaner way of doing instead of hardcoding the minus 1
 }
 removeArtist(artists, 0);
 // console.log(artists.length);
@@ -282,19 +286,10 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(artists, newArtist){
-    // let newArtist = {
-    //   id: 20,
-    //   name: "Kenan Dolic",
-    //   years: "1996-",
-    //   genre: "Web Design",
-    //   nationality: "Bosnian",
-    //   bio: "Iowa State University graduate. Currently enrolled in Lambda School for Full-Stack Web Development."
-    // }
-
-    // artists.push(newArtist);
-    // return artists;
-
+// NOT FINISHED
+function addArtist(artists, id, name, years, genre, nationality, bio){
+    artists.push({id, name, years, genre, nationality, bio});
+    return artists;
   }
 
   
@@ -315,8 +310,10 @@ function lotsOfArt(artists){
       newArr.push(artists[i].name);
     }
   }
+  //console.log(newArr);
   return newArr;
 }
+
 lotsOfArt(artists);
 //console.log(lotsOfArt(artists));
 
