@@ -286,12 +286,28 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-// NOT FINISHED
-function addArtist(artists, id, name, years, genre, nationality, bio){
-    artists.push({id, name, years, genre, nationality, bio});
-    return artists;
-  }
 
+function addArtist(artists, id, name, years, genre, nationality, bio){
+  artists.push({id, name, years, genre, nationality, bio});
+  
+  //console.log(artists,"id: 20", "name: Kenan Dolic", "years: 1996-", "genre: Web Design", "nationality: Bosnian", "bio: Iowa State graduate. Currently enrolled at Lambda School for Full-Stack Web Development.");
+  return artists;
+}
+addArtist(artists,"id: 20", "name: Kenan Dolic", "years: 1996-", "genre: Web Design", "nationality: Bosnian", "bio: Iowa State graduate. Currently enrolled at Lambda School for Full-Stack Web Development.");
+
+/******ATTEMPT 1 - Instructions were confusing if I could pass in the keys as parameters or just one array??? *********/
+// function addArtist(artist){
+//     artist.push({
+//       id: 20,
+//       name: "Kenan Dolic",
+//       years: "1996-",
+//       genre: "Web Design",
+//       nationality: "Bosnian",
+//       b: "Iowa State Alumni. Currently enrolled in Lambda School for Full-Stack Web Development!"
+//     });
+
+//     return artist;
+// }
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
